@@ -1,32 +1,25 @@
-import React, { Component } from 'react';
-import HomePage from './pages/homepage/hompage.component';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+
 import './App.css';
-import {Switch, Route} from 'react-router-dom';
 
+import HomePage from './pages/homepage/homepage.component';
 
-
-
-const HatsPage=()=>(
+const HatsPage = () => (
   <div>
-  <h1>
-  HATSPAGE
-  </h1>
+    <h1>HATS PAGE </h1>
   </div>
 );
 
-class App extends Component {
-  render() {
-    return (
+function App() {
+  return (
     <div>
-    <switch>
-    <Route exact path='/' component={HomePage}/>
-    <HomePage/>
-    </switch>
-   
-     
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/hats' component={HatsPage} />
+      </Switch>
     </div>
-    );
-  }
+  );
 }
 
 export default App;
