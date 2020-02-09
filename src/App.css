@@ -1,7 +1,9 @@
-body {
+ body {
   font-family: 'Open Sans Condensed';
-  padding: 20px, 60px;
+  margin: 2rem;
+  
 }
+
 
 a{
   text-decoration: none;
